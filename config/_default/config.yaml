@@ -3,8 +3,8 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: My Blog # Website name
-baseurl: '' # Website URL
+title: Research Notes # Website name
+baseurl: 'https://k4rtik.github.io/q' # Website URL
 copyright: '' # Footer text, e.g. '© {year} Me'
 
 ############################
@@ -29,10 +29,10 @@ module:
 ## ADVANCED
 ############################
 
-enableGitInfo: false
+enableGitInfo: true
 summaryLength: 30
 paginate: 10
-enableEmoji: true
+enableEmoji: false
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
@@ -50,7 +50,7 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    codeFences: false
+    codeFences: true
   tableOfContents:
     startLevel: 2
     endLevel: 3

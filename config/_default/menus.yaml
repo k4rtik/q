@@ -5,7 +5,7 @@
 
 main:
   - name: Home
-    url: https://k4rtik.github.io/q/
+    url: /.
     weight: 10
   - name: About
     url: about/

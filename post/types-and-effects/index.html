@@ -5,8 +5,8 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Wowchemy 5.2.0 for Hugo">
 <meta name=author content="Kartik">
-<meta name=description content="Graduate Student">
-<link rel=alternate hreflang=en-us href=https://k4rtik.github.io/q/tags/>
+<meta name=description content="Region-Based Memory Management  Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management. Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. ACM Trans. Program. Lang. Syst. 20, 4 (July 1998), 724–767.">
+<link rel=alternate hreflang=en-us href=https://k4rtik.github.io/q/post/types-and-effects/>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <meta name=theme-color content="#2962ff">
 <script src=/q/js/mathjax-config.js></script>
@@ -17,23 +17,25 @@
 <link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <link rel=stylesheet href=/q/css/wowchemy.f38aba989766e64898f83e1b2bce21e6.css>
-<link rel=alternate href=/q/tags/index.xml type=application/rss+xml title="Research Notes">
 <link rel=manifest href=/q/index.webmanifest>
 <link rel=icon type=image/png href=/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://k4rtik.github.io/q/tags/>
+<link rel=canonical href=https://k4rtik.github.io/q/post/types-and-effects/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Research Notes">
-<meta property="og:url" content="https://k4rtik.github.io/q/tags/">
-<meta property="og:title" content="Tags | Research Notes">
-<meta property="og:description" content="Graduate Student"><meta property="og:image" content="https://k4rtik.github.io/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://k4rtik.github.io/q/post/types-and-effects/">
+<meta property="og:title" content="Types and Effects | Research Notes">
+<meta property="og:description" content="Region-Based Memory Management  Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management. Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. ACM Trans. Program. Lang. Syst. 20, 4 (July 1998), 724–767."><meta property="og:image" content="https://k4rtik.github.io/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://k4rtik.github.io/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2021-08-20T15:43:17-05:00">
+<meta property="article:modified_time" content="2021-08-20T15:56:43-05:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://k4rtik.github.io/q/post/types-and-effects/"},"headline":"Types and Effects","datePublished":"2021-08-20T15:43:17-05:00","dateModified":"2021-08-20T15:56:43-05:00","author":{"@type":"Person","name":"Kartik"},"publisher":{"@type":"Organization","name":"Research Notes","logo":{"@type":"ImageObject","url":"https://k4rtik.github.io/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"}},"description":"Region-Based Memory Management  Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management. Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. ACM Trans. Program. Lang. Syst. 20, 4 (July 1998), 724–767."}</script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#2962ff",text:"rgb(255, 255, 255)"},button:{background:"rgb(255, 255, 255)",text:"#2962ff"}},theme:"classic",content:{message:"This website uses cookies to ensure you get the best experience on our website.",dismiss:"Got it!",link:"Learn more",href:"https://www.cookiesandyou.com"}})})</script>
-<title>Tags | Research Notes</title>
+<title>Types and Effects | Research Notes</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=50e56892591ab6b22cc42b4721a84f2e>
 <script src=/q/js/wowchemy-init.min.b8153d4570dcbb34350a2a846dba8c03.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -97,11 +99,57 @@
 </nav>
 </div>
 <div class=page-body>
-<div class="universal-wrapper pt-3">
-<h1>Tags</h1>
+<article class=article>
+<div class="article-container pt-3">
+<h1>Types and Effects</h1>
+<div class=article-metadata>
+<span class=article-date>
+Last updated on
+Aug 20, 2021
+</span>
 </div>
-<div class=universal-wrapper>
 </div>
+<div class=article-container>
+<div class=article-style>
+<h2 id=region-based-memory-management>Region-Based Memory Management</h2>
+<ul>
+<li>Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management.</li>
+<li>Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. <i>ACM Trans. Program. Lang. Syst.</i> 20, 4 (July 1998), 724–767. DOI:https://doi.org/10.1145/291891.291894</li>
+<li>Dan Grossman, Greg Morrisett, Trevor Jim, Michael Hicks, Yanling Wang, and James Cheney. 2002. Region-based memory management in cyclone. In <i>Proceedings of the ACM SIGPLAN 2002 conference on Programming language design and implementation</i> (<i>PLDI &lsquo;02</i>). Association for Computing Machinery, New York, NY, USA, 282–293. DOI:https://doi.org/10.1145/512529.512563</li>
+<li>Tofte, M., Birkedal, L., Elsman, M. et al. A Retrospective on Region-Based Memory Management. Higher-Order and Symbolic Computation 17, 245–265 (2004).</li>
+<li>Michael Hicks, Greg Morrisett, Dan Grossman, and Trevor Jim. 2004. Experience with safe manual memory-management in cyclone. In <i>Proceedings of the 4th international symposium on Memory management</i> (<i>ISMM &lsquo;04</i>). Association for Computing Machinery, New York, NY, USA, 73–84. DOI:https://doi.org/10.1145/1029873.1029883</li>
+</ul>
+</div>
+<p class=edit-page>
+<a href=https://github.com/k4rtik/q/edit/main/content/post/types-and-effects/index.md>
+<i class="fas fa-pen pr-2"></i>Edit this page
+</a>
+</p>
+<div class="media author-card content-widget-hr">
+<div class=media-body>
+<h5 class=card-title><a href=https://k4rtik.github.io/q>Kartik</a></h5>
+<h6 class=card-subtitle>Graduate Student</h6>
+<p class=card-text>Design and Verification of Programming Languages for realistic Quantum Computing</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=https://twitter.com/k4rtik target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/k4rtik target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class=article-widget>
+<div class=post-nav>
+</div>
+</div>
+</div>
+</article>
 </div>
 <div class=page-footer>
 <div class=container>

@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: Research Notes # Website name
-baseurl: 'https://k4rtik.github.io/q' # Website URL
+baseurl: 'https://k4rtik.github.io/q/' # Website URL
 copyright: '' # Footer text, e.g. '© {year} Me'
 
 ############################

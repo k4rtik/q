@@ -5,7 +5,8 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Wowchemy 5.2.0 for Hugo">
 <meta name=author content="Kartik">
-<meta name=description content="Region-Based Memory Management  Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management. Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. ACM Trans. Program. Lang. Syst. 20, 4 (July 1998), 724–767.">
+<meta name=description content="Type and Effect Systems How can we reason about the effects of a program without using monads or uniqueness types?
+An effect describes how an expression computes. Denoted by $\varphi$ annotation in the statics of the language.">
 <link rel=alternate hreflang=en-us href=https://k4rtik.github.io/q/post/types-and-effects/>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <meta name=theme-color content="#2962ff">
@@ -25,18 +26,19 @@
 <meta property="og:site_name" content="Research Notes">
 <meta property="og:url" content="https://k4rtik.github.io/q/post/types-and-effects/">
 <meta property="og:title" content="Types and Effects | Research Notes">
-<meta property="og:description" content="Region-Based Memory Management  Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management. Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. ACM Trans. Program. Lang. Syst. 20, 4 (July 1998), 724–767."><meta property="og:image" content="https://k4rtik.github.io/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png">
+<meta property="og:description" content="Type and Effect Systems How can we reason about the effects of a program without using monads or uniqueness types?
+An effect describes how an expression computes. Denoted by $\varphi$ annotation in the statics of the language."><meta property="og:image" content="https://k4rtik.github.io/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://k4rtik.github.io/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2021-08-20T15:43:17-05:00">
-<meta property="article:modified_time" content="2021-08-23T09:07:02-05:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://k4rtik.github.io/q/post/types-and-effects/"},"headline":"Types and Effects","datePublished":"2021-08-20T15:43:17-05:00","dateModified":"2021-08-23T09:07:02-05:00","author":{"@type":"Person","name":"Kartik"},"publisher":{"@type":"Organization","name":"Research Notes","logo":{"@type":"ImageObject","url":"https://k4rtik.github.io/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"}},"description":"Region-Based Memory Management  Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management. Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. ACM Trans. Program. Lang. Syst. 20, 4 (July 1998), 724–767."}</script>
+<meta property="article:modified_time" content="2021-08-23T12:00:13-05:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://k4rtik.github.io/q/post/types-and-effects/"},"headline":"Types and Effects","datePublished":"2021-08-20T15:43:17-05:00","dateModified":"2021-08-23T12:00:13-05:00","author":{"@type":"Person","name":"Kartik"},"publisher":{"@type":"Organization","name":"Research Notes","logo":{"@type":"ImageObject","url":"https://k4rtik.github.io/q/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"}},"description":"Type and Effect Systems How can we reason about the effects of a program without using monads or uniqueness types?\nAn effect describes how an expression computes. Denoted by $\\varphi$ annotation in the statics of the language."}</script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#2962ff",text:"rgb(255, 255, 255)"},button:{background:"rgb(255, 255, 255)",text:"#2962ff"}},theme:"classic",content:{message:"This website uses cookies to ensure you get the best experience on our website.",dismiss:"Got it!",link:"Learn more",href:"https://www.cookiesandyou.com"}})})</script>
 <title>Types and Effects | Research Notes</title>
 </head>
 <body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=50e56892591ab6b22cc42b4721a84f2e>
-<script src=/q/js/wowchemy-init.min.b8153d4570dcbb34350a2a846dba8c03.js></script>
+<script src=/q/js/wowchemy-init.min.c2ae95842e5b33a787c7b8c567e989a4.js></script>
 <aside class=search-modal id=search>
 <div class=container>
 <section class=search-header>
@@ -78,22 +80,6 @@
 <li class=nav-item>
 <a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
 </li>
-<li class="nav-item dropdown theme-dropdown">
-<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
-<i class="fas fa-moon" aria-hidden=true></i>
-</a>
-<div class=dropdown-menu>
-<a href=# class="dropdown-item js-set-theme-light">
-<span>Light</span>
-</a>
-<a href=# class="dropdown-item js-set-theme-dark">
-<span>Dark</span>
-</a>
-<a href=# class="dropdown-item js-set-theme-auto">
-<span>Automatic</span>
-</a>
-</div>
-</li>
 </ul>
 </div>
 </nav>
@@ -111,14 +97,35 @@ Aug 23, 2021
 </div>
 <div class=article-container>
 <div class=article-style>
+<h2 id=type-and-effect-systems>Type and Effect Systems</h2>
+<p>How can we reason about the effects of a program without using monads or uniqueness types?</p>
+<p>An effect describes how an expression computes. Denoted by $\varphi$ annotation in the statics of the language.</p>
 <h2 id=region-based-memory-management>Region-Based Memory Management</h2>
-<ul>
+<p>A region-inference judgment such as</p>
+<blockquote>
+<p>$TE \vdash e ⇒ e' :(τ, ρ), \varphi$</p>
+</blockquote>
+<p>where $TE$ is a type environment mapping variables with pairs $(\tau, \rho)$ of types and region variables (or <em>place</em>) and $\varphi$ is an effect (a finite set of region variables). It is read as:</p>
+<blockquote>
+<p>in the type environment $TE$, the source expression $e$ is translated into a region-annotated expression $e'$, which has type $τ$, is placed in region $ρ$, and has effect $\varphi$.</p>
+</blockquote>
+<p>$\varphi$ contains the superset of regions needed to evaluate $e$.</p>
+<p>One of the common misconceptions associated with regions may be that they involve allocations only on the heap. But the most common case is to have regions which only ever contain one value, called <em>finite regions</em>. A common optimization then is to allocate those on the stack.</p>
+<h2 id=references>References</h2>
+<details class=spoiler id=spoiler-0>
+<summary>References</summary>
+<p><ul>
 <li>Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management.</li>
-<li>Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. <i>ACM Trans. Program. Lang. Syst.</i> 20, 4 (July 1998), 724–767. DOI:https://doi.org/10.1145/291891.291894</li>
-<li>Dan Grossman, Greg Morrisett, Trevor Jim, Michael Hicks, Yanling Wang, and James Cheney. 2002. Region-based memory management in cyclone. In <i>Proceedings of the ACM SIGPLAN 2002 conference on Programming language design and implementation</i> (<i>PLDI &lsquo;02</i>). Association for Computing Machinery, New York, NY, USA, 282–293. DOI:https://doi.org/10.1145/512529.512563</li>
-<li>Tofte, M., Birkedal, L., Elsman, M. et al. A Retrospective on Region-Based Memory Management. Higher-Order and Symbolic Computation 17, 245–265 (2004).</li>
-<li>Michael Hicks, Greg Morrisett, Dan Grossman, and Trevor Jim. 2004. Experience with safe manual memory-management in cyclone. In <i>Proceedings of the 4th international symposium on Memory management</i> (<i>ISMM &lsquo;04</i>). Association for Computing Machinery, New York, NY, USA, 73–84. DOI:https://doi.org/10.1145/1029873.1029883</li>
+<li>Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. <i>ACM Trans. Program. Lang. Syst.</i> 20, 4 (July 1998), 724&ndash;767. DOI:https://doi.org/10.1145/291891.291894</li>
+<li>Dan Grossman, Greg Morrisett, Trevor Jim, Michael Hicks, Yanling Wang, and James Cheney. 2002. Region-based memory management in cyclone. PLDI &lsquo;02. <a href=http://www.cs.umd.edu/projects/cyclone/papers/cyclone-regions-tr.pdf>http://www.cs.umd.edu/projects/cyclone/papers/cyclone-regions-tr.pdf</a></li>
+<li>Philip Wadler and Peter Thiemann. 2003. The marriage of effects and monads. ACM Transactions on Computational Logic. <a href=https://homepages.inf.ed.ac.uk/wadler/papers/effectstocl/effectstocl.pdf>https://homepages.inf.ed.ac.uk/wadler/papers/effectstocl/effectstocl.pdf</a></li>
+<li>Tofte, M., Birkedal, L., Elsman, M. et al. A Retrospective on Region-Based Memory Management. Higher-Order and Symbolic Computation 17, 245&ndash;265 (2004).</li>
+<li>Fritz Henglein, Henning Makholm, and Henning Niss. 2005. Effect Types and Region-Based Memory Management. Ch-3 of Advanced Topics in Types and Programming Languages.</li>
+<li>Nikhil Swamy, Michael Hicks, Greg Morrisett, Dan Grossman, and Trevor Jim. 2006. Safe Manual Memory Management in Cyclone. Science of Computer Programming. Special issue on memory management. <a href=http://www.cs.umd.edu/projects/PL/cyclone/scp.pdf>http://www.cs.umd.edu/projects/PL/cyclone/scp.pdf</a></li>
+<li>Asumu Takikawa. 2012. Type and Effect Systems. URL: <a href=http://www.ccs.neu.edu/home/amal/course/7480-s12/effects-notes.pdf>http://www.ccs.neu.edu/home/amal/course/7480-s12/effects-notes.pdf</a> Note: See for connections to FX.</li>
 </ul>
+</p>
+</details>
 </div>
 <p class=edit-page>
 <a href=https://github.com/k4rtik/q/edit/main/content/post/types-and-effects/index.md>

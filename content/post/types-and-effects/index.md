@@ -35,6 +35,11 @@ $\varphi$ contains the superset of regions needed to evaluate $e$.
 
 One of the common misconceptions associated with regions may be that they involve allocations only on the heap. But the most common case is to have regions which only ever contain one value, called _finite regions_. A common optimization then is to allocate those on the stack.
 
+## (Partial) History
+
+{{< figure src="pottier-history.png" caption="Credits: [François Pottier](http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf#page=5)" >}}
+
+
 ## References
 {{< spoiler text="References" >}}
 - Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management.

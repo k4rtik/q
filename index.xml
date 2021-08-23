@@ -12,8 +12,23 @@
 &lt;/blockquote>
 &lt;p>$\varphi$ contains the superset of regions needed to evaluate $e$.&lt;/p>
 &lt;p>One of the common misconceptions associated with regions may be that they involve allocations only on the heap. But the most common case is to have regions which only ever contain one value, called &lt;em>finite regions&lt;/em>. A common optimization then is to allocate those on the stack.&lt;/p>
+&lt;h2 id="partial-history">(Partial) History&lt;/h2>
+&lt;figure id="figure-credits-françois-pottierhttppauillacinriafrfpottierslidesfpottier-2007-05-linear-bestiarypdfpage5">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >
+&lt;img alt="Credits: [François Pottier](http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf#page=5)" srcset="
+/q/post/types-and-effects/pottier-history_hu84c7938e1d93a8a4fae9ea4d58e66e16_490733_9d31d867fd8b1cfca537ff3198d60e08.png 400w,
+/q/post/types-and-effects/pottier-history_hu84c7938e1d93a8a4fae9ea4d58e66e16_490733_c18d66305db6738505f9d384d4c6bac6.png 760w,
+/q/post/types-and-effects/pottier-history_hu84c7938e1d93a8a4fae9ea4d58e66e16_490733_1200x1200_fit_lanczos_3.png 1200w"
+src="https://k4rtik.github.io/q/q/post/types-and-effects/pottier-history_hu84c7938e1d93a8a4fae9ea4d58e66e16_490733_9d31d867fd8b1cfca537ff3198d60e08.png"
+width="760"
+height="571"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+Credits: &lt;a href="http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf#page=5">François Pottier&lt;/a>
+&lt;/figcaption>&lt;/figure>
 &lt;h2 id="references">References&lt;/h2>
-&lt;details class="spoiler " id="spoiler-0">
+&lt;details class="spoiler " id="spoiler-1">
 &lt;summary>References&lt;/summary>
 &lt;p>&lt;ul>
 &lt;li>Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management.&lt;/li>

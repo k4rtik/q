@@ -32,13 +32,15 @@ Credits: &lt;a href="http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-
 &lt;summary>References&lt;/summary>
 &lt;p>&lt;ul>
 &lt;li>Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management.&lt;/li>
-&lt;li>Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. &lt;i>ACM Trans. Program. Lang. Syst.&lt;/i> 20, 4 (July 1998), 724&amp;ndash;767. DOI:https://doi.org/10.1145/291891.291894&lt;/li>
+&lt;li>Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. TOPLAS. &lt;a href="https://doi.org/10.1145/291891.291894">https://doi.org/10.1145/291891.291894&lt;/a>&lt;/li>
 &lt;li>Dan Grossman, Greg Morrisett, Trevor Jim, Michael Hicks, Yanling Wang, and James Cheney. 2002. Region-based memory management in cyclone. PLDI &amp;lsquo;02. &lt;a href="http://www.cs.umd.edu/projects/cyclone/papers/cyclone-regions-tr.pdf">http://www.cs.umd.edu/projects/cyclone/papers/cyclone-regions-tr.pdf&lt;/a>&lt;/li>
 &lt;li>Philip Wadler and Peter Thiemann. 2003. The marriage of effects and monads. ACM Transactions on Computational Logic. &lt;a href="https://homepages.inf.ed.ac.uk/wadler/papers/effectstocl/effectstocl.pdf">https://homepages.inf.ed.ac.uk/wadler/papers/effectstocl/effectstocl.pdf&lt;/a>&lt;/li>
 &lt;li>Tofte, M., Birkedal, L., Elsman, M. et al. A Retrospective on Region-Based Memory Management. Higher-Order and Symbolic Computation 17, 245&amp;ndash;265 (2004).&lt;/li>
 &lt;li>Fritz Henglein, Henning Makholm, and Henning Niss. 2005. Effect Types and Region-Based Memory Management. Ch-3 of Advanced Topics in Types and Programming Languages.&lt;/li>
 &lt;li>Nikhil Swamy, Michael Hicks, Greg Morrisett, Dan Grossman, and Trevor Jim. 2006. Safe Manual Memory Management in Cyclone. Science of Computer Programming. Special issue on memory management. &lt;a href="http://www.cs.umd.edu/projects/PL/cyclone/scp.pdf">http://www.cs.umd.edu/projects/PL/cyclone/scp.pdf&lt;/a>&lt;/li>
-&lt;li>Asumu Takikawa. 2012. Type and Effect Systems. URL: &lt;a href="http://www.ccs.neu.edu/home/amal/course/7480-s12/effects-notes.pdf">http://www.ccs.neu.edu/home/amal/course/7480-s12/effects-notes.pdf&lt;/a> Note: See for connections to FX.&lt;/li>
+&lt;li>François Pottier. 2007. Wandering through linear types, capabilities, and
+regions. &lt;a href="http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf">http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf&lt;/a>&lt;/li>
+&lt;li>Asumu Takikawa. 2012. Type and Effect Systems. &lt;a href="http://www.ccs.neu.edu/home/amal/course/7480-s12/effects-notes.pdf">http://www.ccs.neu.edu/home/amal/course/7480-s12/effects-notes.pdf&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/p>
 &lt;/details></description></item><item><title/><link>https://k4rtik.github.io/q/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://k4rtik.github.io/q/about/</guid><description/></item><item><title/><link>https://k4rtik.github.io/q/admin/config.yml</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://k4rtik.github.io/q/admin/config.yml</guid><description/></item></channel></rss>

@@ -11,12 +11,12 @@
 &lt;p>in the type environment $TE$, the source expression $e$ is translated into a region-annotated expression $e'$, which has type $τ$, is placed in region $ρ$, and has effect $\varphi$.&lt;/p>
 &lt;/blockquote>
 &lt;p>$\varphi$ contains the superset of regions needed to evaluate $e$.&lt;/p>
-&lt;p>One of the common misconceptions associated with regions may be that they involve allocations only on the heap. But the most common case is to have regions which only ever contain one value, called &lt;em>finite regions&lt;/em>. A common optimization then is to allocate those on the stack.&lt;/p>
+&lt;p>One of my misconceptions associated with regions was that they involve allocations only on the heap. But turns out the most common case is to have regions which only ever contain one value, called &lt;em>finite regions&lt;/em>. A common optimization then is to allocate those on the stack.&lt;/p>
 &lt;h2 id="partial-history">(Partial) History&lt;/h2>
-&lt;figure id="figure-credits-françois-pottierhttppauillacinriafrfpottierslidesfpottier-2007-05-linear-bestiarypdfpage5">
+&lt;figure id="figure-partial-history-circa-2007-credits-françois-pottierhttppauillacinriafrfpottierslidesfpottier-2007-05-linear-bestiarypdfpage5">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >
-&lt;img alt="Credits: [François Pottier](http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf#page=5)" srcset="
+&lt;img alt="Partial history circa 2007. Credits: [François Pottier](http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf#page=5)" srcset="
 /q/post/types-and-effects/pottier-history_hu84c7938e1d93a8a4fae9ea4d58e66e16_490733_9d31d867fd8b1cfca537ff3198d60e08.png 400w,
 /q/post/types-and-effects/pottier-history_hu84c7938e1d93a8a4fae9ea4d58e66e16_490733_c18d66305db6738505f9d384d4c6bac6.png 760w,
 /q/post/types-and-effects/pottier-history_hu84c7938e1d93a8a4fae9ea4d58e66e16_490733_1200x1200_fit_lanczos_3.png 1200w"
@@ -25,14 +25,13 @@ width="760"
 height="571"
 loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption>
-Credits: &lt;a href="http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf#page=5">François Pottier&lt;/a>
+Partial history circa 2007. Credits: &lt;a href="http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf#page=5">François Pottier&lt;/a>
 &lt;/figcaption>&lt;/figure>
 &lt;h2 id="references">References&lt;/h2>
 &lt;details class="spoiler " id="spoiler-1">
 &lt;summary>References&lt;/summary>
 &lt;p>&lt;ul>
 &lt;li>Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management.&lt;/li>
-&lt;li>Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. TOPLAS. &lt;a href="https://doi.org/10.1145/291891.291894">https://doi.org/10.1145/291891.291894&lt;/a>&lt;/li>
 &lt;li>Dan Grossman, Greg Morrisett, Trevor Jim, Michael Hicks, Yanling Wang, and James Cheney. 2002. Region-based memory management in cyclone. PLDI &amp;lsquo;02. &lt;a href="http://www.cs.umd.edu/projects/cyclone/papers/cyclone-regions-tr.pdf">http://www.cs.umd.edu/projects/cyclone/papers/cyclone-regions-tr.pdf&lt;/a>&lt;/li>
 &lt;li>Philip Wadler and Peter Thiemann. 2003. The marriage of effects and monads. ACM Transactions on Computational Logic. &lt;a href="https://homepages.inf.ed.ac.uk/wadler/papers/effectstocl/effectstocl.pdf">https://homepages.inf.ed.ac.uk/wadler/papers/effectstocl/effectstocl.pdf&lt;/a>&lt;/li>
 &lt;li>Tofte, M., Birkedal, L., Elsman, M. et al. A Retrospective on Region-Based Memory Management. Higher-Order and Symbolic Computation 17, 245&amp;ndash;265 (2004).&lt;/li>
@@ -41,6 +40,7 @@ Credits: &lt;a href="http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-
 &lt;li>François Pottier. 2007. Wandering through linear types, capabilities, and
 regions. &lt;a href="http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf">http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf&lt;/a>&lt;/li>
 &lt;li>Asumu Takikawa. 2012. Type and Effect Systems. &lt;a href="http://www.ccs.neu.edu/home/amal/course/7480-s12/effects-notes.pdf">http://www.ccs.neu.edu/home/amal/course/7480-s12/effects-notes.pdf&lt;/a>&lt;/li>
+&lt;li>El Pin Al. 2019. Incomplete Bibliography of Region-based Memory Management. &lt;a href="https://github.com/elpinal/regions#incomplete-bibliography-of-region-based-memory-management">https://github.com/elpinal/regions#incomplete-bibliography-of-region-based-memory-management&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/p>
 &lt;/details></description></item><item><title/><link>https://k4rtik.github.io/q/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://k4rtik.github.io/q/about/</guid><description/></item><item><title/><link>https://k4rtik.github.io/q/admin/config.yml</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://k4rtik.github.io/q/admin/config.yml</guid><description/></item></channel></rss>

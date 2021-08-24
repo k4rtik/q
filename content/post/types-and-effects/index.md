@@ -33,17 +33,18 @@ where $TE$ is a type environment mapping variables with pairs $(\tau, \rho)$ of 
 
 $\varphi$ contains the superset of regions needed to evaluate $e$.
 
-One of the common misconceptions associated with regions may be that they involve allocations only on the heap. But the most common case is to have regions which only ever contain one value, called _finite regions_. A common optimization then is to allocate those on the stack.
+One of my misconceptions associated with regions was that they involve allocations only on the heap. But turns out the most common case is to have regions which only ever contain one value, called _finite regions_. A common optimization then is to allocate those on the stack.
+
+
 
 ## (Partial) History
 
-{{< figure src="pottier-history.png" caption="Credits: [François Pottier](http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf#page=5)" >}}
+{{< figure src="pottier-history.png" caption="Partial history circa 2007. Credits: [François Pottier](http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf#page=5)" >}}
 
 
 ## References
 {{< spoiler text="References" >}}
 - Mads Tofte, Jean-Pierre Talpin. 1997. Region-Based Memory Management.
-- Mads Tofte and Lars Birkedal. 1998. A region inference algorithm. TOPLAS. https://doi.org/10.1145/291891.291894
 - Dan Grossman, Greg Morrisett, Trevor Jim, Michael Hicks, Yanling Wang, and James Cheney. 2002. Region-based memory management in cyclone. PLDI '02. http://www.cs.umd.edu/projects/cyclone/papers/cyclone-regions-tr.pdf
 - Philip Wadler and Peter Thiemann. 2003. The marriage of effects and monads. ACM Transactions on Computational Logic. https://homepages.inf.ed.ac.uk/wadler/papers/effectstocl/effectstocl.pdf
 - Tofte, M., Birkedal, L., Elsman, M. et al. A Retrospective on Region-Based Memory Management. Higher-Order and Symbolic Computation 17, 245--265 (2004).
@@ -52,4 +53,5 @@ One of the common misconceptions associated with regions may be that they involv
 - François Pottier. 2007. Wandering through linear types, capabilities, and
 regions. http://pauillac.inria.fr/~fpottier/slides/fpottier-2007-05-linear-bestiary.pdf
 - Asumu Takikawa. 2012. Type and Effect Systems. http://www.ccs.neu.edu/home/amal/course/7480-s12/effects-notes.pdf
+- El Pin Al. 2019. Incomplete Bibliography of Region-based Memory Management. https://github.com/elpinal/regions#incomplete-bibliography-of-region-based-memory-management
 {{< /spoiler >}}

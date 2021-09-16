@@ -39,3 +39,7 @@ Further, since LambdaQs is based on the Modernized Algol (MA) language of Bob Ha
 - [sml-typed-abts](https://github.com/RedPRL/sml-typed-abts), an implementation of Abstract Binding Trees (ABTs). Jon seems to have [an OCaml port](https://github.com/jonsterling/ocaml-abt) too, but it seems unmaintained with a single commit.
 
 The latter two projects will be helpful for me to translate Q# source syntax directly into PFPL-style ABTs.
+
+---
+
+Turns out what I am really looking for is [BNF Converter](http://bnfc.digitalgrammars.com/).

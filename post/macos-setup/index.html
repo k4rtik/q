@@ -5,8 +5,8 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Wowchemy 5.2.0 for Hugo">
 <meta name=author content="Kartik">
-<meta name=description content="I had a fun time writing the openQASM parser over two years ago during my two week visit at UMD College Park. Since then, I have been quite fascinated with parsers.">
-<link rel=alternate hreflang=en-us href=https://k4rtik.github.io/q/post/parsers/>
+<meta name=description content="I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it&rsquo;s best to document it here for both my future self and for others.">
+<link rel=alternate hreflang=en-us href=https://k4rtik.github.io/q/post/macos-setup/>
 <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
 <meta name=theme-color content="#2962ff">
 <script src=/q/js/mathjax-config.js></script>
@@ -20,22 +20,22 @@
 <link rel=manifest href=/q/index.webmanifest>
 <link rel=icon type=image/png href=/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://k4rtik.github.io/q/post/parsers/>
+<link rel=canonical href=https://k4rtik.github.io/q/post/macos-setup/>
 <meta property="twitter:card" content="summary">
 <meta property="og:site_name" content="Research Notes">
-<meta property="og:url" content="https://k4rtik.github.io/q/post/parsers/">
-<meta property="og:title" content="How to write parsers fast | Research Notes">
-<meta property="og:description" content="I had a fun time writing the openQASM parser over two years ago during my two week visit at UMD College Park. Since then, I have been quite fascinated with parsers."><meta property="og:image" content="https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_512x512_fill_lanczos_center_3.png">
+<meta property="og:url" content="https://k4rtik.github.io/q/post/macos-setup/">
+<meta property="og:title" content="MacOS Setup | Research Notes">
+<meta property="og:description" content="I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it&rsquo;s best to document it here for both my future self and for others."><meta property="og:image" content="https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
-<meta property="article:published_time" content="2021-09-15T18:01:03-05:00">
+<meta property="article:published_time" content="2022-01-11T16:08:01-06:00">
 <meta property="article:modified_time" content="2022-01-11T16:24:53-06:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://k4rtik.github.io/q/post/parsers/"},"headline":"How to write parsers fast","datePublished":"2021-09-15T18:01:03-05:00","dateModified":"2022-01-11T16:24:53-06:00","author":{"@type":"Person","name":"Kartik"},"publisher":{"@type":"Organization","name":"Research Notes","logo":{"@type":"ImageObject","url":"https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_192x192_fill_lanczos_center_3.png"}},"description":"I had a fun time writing the openQASM parser over two years ago during my two week visit at UMD College Park. Since then, I have been quite fascinated with parsers."}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://k4rtik.github.io/q/post/macos-setup/"},"headline":"MacOS Setup","datePublished":"2022-01-11T16:08:01-06:00","dateModified":"2022-01-11T16:24:53-06:00","author":{"@type":"Person","name":"Kartik"},"publisher":{"@type":"Organization","name":"Research Notes","logo":{"@type":"ImageObject","url":"https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_192x192_fill_lanczos_center_3.png"}},"description":"I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it\u0026rsquo;s best to document it here for both my future self and for others."}</script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#2962ff",text:"rgb(255, 255, 255)"},button:{background:"rgb(255, 255, 255)",text:"#2962ff"}},theme:"classic",content:{message:"This website uses cookies to ensure you get the best experience on our website.",dismiss:"Got it!",link:"Learn more",href:"https://www.cookiesandyou.com"}})})</script>
-<title>How to write parsers fast | Research Notes</title>
+<title>MacOS Setup | Research Notes</title>
 </head>
-<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=3f0c4c7add9ef83732b1dd1c0dff50aa>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=2ca643715c2393128d4465e892f1d244>
 <script src=/q/js/wowchemy-init.min.c2ae95842e5b33a787c7b8c567e989a4.js></script>
 <aside class=search-modal id=search>
 <div class=container>
@@ -85,7 +85,7 @@
 <div class=page-body>
 <article class=article>
 <div class="article-container pt-3">
-<h1>How to write parsers fast</h1>
+<h1>MacOS Setup</h1>
 <div class=article-metadata>
 <span class=article-date>
 Last updated on
@@ -95,23 +95,53 @@ Jan 11, 2022
 </div>
 <div class=article-container>
 <div class=article-style>
-<p>I had a fun time writing the openQASM parser over two years ago during my two week visit at UMD College Park. Since then, I have been quite fascinated with parsers. Today, I was trying to write a parser for Lambda Q#, but I wanted to figure out if I could reduce the work I need to do and avoid boilerplate.</p>
-<p>I found a few projects that seem helpful:</p>
+<p>I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it&rsquo;s best to document it here for both my future self and for others.</p>
+<h2 id=editors>Editors</h2>
 <ul>
-<li>Steffen Smolka&rsquo;s <a href=https://github.com/smolkaj/nice-parser target=_blank rel=noopener>Nice Parser</a> that is meant exactly for this need.</li>
-<li>Lélio Brun&rsquo;s <a href=https://github.com/Lelio-Brun/Obelisk target=_blank rel=noopener>Obelisk</a>, which I may end up using to generate good documentation for the grammar.</li>
+<li>VSCode: all config is auto-synced using GitHub.</li>
+<li>vim: I just use Tim Pope&rsquo;s sensible now as I don&rsquo;t spend as much time on vim anymore</li>
 </ul>
-<p>Further, since LambdaQs is based on the Modernized Algol (MA) language of Bob Harper, I somehow also stumbled upon a bunch of projects by Jon Sterling, specifically:</p>
+<h2 id=fonts>Fonts</h2>
 <ul>
-<li><a href=https://github.com/jonsterling/sml-modernized-algol target=_blank rel=noopener>sml-modernized-algol</a>, which seems like an ABT representation of PFPL. Someone also ended up contributing <a href=https://github.com/jonsterling/sml-modernized-algol/pull/4 target=_blank rel=noopener>a parser for the surface syntax later</a>.</li>
-<li><a href=https://github.com/RedPRL/sml-typed-abts target=_blank rel=noopener>sml-typed-abts</a>, an implementation of Abstract Binding Trees (ABTs). Jon seems to have <a href=https://github.com/jonsterling/ocaml-abt target=_blank rel=noopener>an OCaml port</a> too, but it seems unmaintained with a single commit.</li>
+<li>mononoki for Agda</li>
+<li>FiraCode-Retina for everything else</li>
 </ul>
-<p>The latter two projects will be helpful for me to translate Q# source syntax directly into PFPL-style ABTs.</p>
-<hr>
-<p>Turns out what I am really looking for is <a href=http://bnfc.digitalgrammars.com/ target=_blank rel=noopener>BNF Converter</a>.</p>
+<h2 id=packages>Packages</h2>
+<p>See <a href=https://github.com/k4rtik/shallow-backup/tree/master/packages target=_blank rel=noopener>https://github.com/k4rtik/shallow-backup/tree/master/packages</a> for complete list. Here are some essentials:</p>
+<ul>
+<li>brave-browser</li>
+<li>du-dust</li>
+<li>gh</li>
+<li>git</li>
+<li>hiddenbar</li>
+<li>hugo</li>
+<li>iterm2</li>
+<li>mailtrackerblocker</li>
+<li>opam</li>
+<li>PopClip</li>
+<li>rectangle</li>
+<li>rescuetime</li>
+<li>ripgrep</li>
+<li>tealdeer</li>
+<li>ticktick</li>
+<li>tree</li>
+<li>visual-studio-code</li>
+<li>yt-dl</li>
+<li>zoom</li>
+</ul>
+<h2 id=languages>Languages</h2>
+<ul>
+<li>Agda</li>
+<li>Go</li>
+<li>Haskell</li>
+<li>LaTeX</li>
+<li>OCaml and Coq</li>
+<li>Python3</li>
+<li>Rust</li>
+</ul>
 </div>
 <p class=edit-page>
-<a href=https://github.com/k4rtik/q/edit/main/content/post/parsers/index.md>
+<a href=https://github.com/k4rtik/q/edit/main/content/post/macos-setup.md>
 <i class="fas fa-pen pr-2"></i>Edit this page
 </a>
 </p>
@@ -137,12 +167,8 @@ Jan 11, 2022
 <div class=article-widget>
 <div class=post-nav>
 <div class=post-nav-item>
-<div class=meta-nav>Next</div>
-<a href=/q/post/macos-setup/ rel=next>MacOS Setup</a>
-</div>
-<div class=post-nav-item>
 <div class=meta-nav>Previous</div>
-<a href=/q/post/types-and-effects/ rel=prev>Types and Effects</a>
+<a href=/q/post/parsers/ rel=prev>How to write parsers fast</a>
 </div>
 </div>
 </div>

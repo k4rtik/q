@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Research Notes</title><link>https://k4rtik.github.io/q/post/</link><atom:link href="https://k4rtik.github.io/q/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_512x512_fill_lanczos_center_3.png</url><title>Posts</title><link>https://k4rtik.github.io/q/post/</link></image><item><title>How to write parsers fast</title><link>https://k4rtik.github.io/q/post/parsers/</link><pubDate>Wed, 15 Sep 2021 18:01:03 -0500</pubDate><guid>https://k4rtik.github.io/q/post/parsers/</guid><description>&lt;p>I had a fun time writing the openQASM parser over two years ago during my two week visit at UMD College Park. Since then, I have been quite fascinated with parsers. Today, I was trying to write a parser for Lambda Q#, but I wanted to figure out if I could reduce the work I need to do and avoid boilerplate.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Research Notes</title><link>https://k4rtik.github.io/q/post/</link><atom:link href="https://k4rtik.github.io/q/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_512x512_fill_lanczos_center_3.png</url><title>Posts</title><link>https://k4rtik.github.io/q/post/</link></image><item><title>MacOS Setup</title><link>https://k4rtik.github.io/q/post/macos-setup/</link><pubDate>Tue, 11 Jan 2022 16:08:01 -0600</pubDate><guid>https://k4rtik.github.io/q/post/macos-setup/</guid><description>&lt;p>I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it&amp;rsquo;s best to document it here for both my future self and for others.&lt;/p>
+&lt;h2 id="editors">Editors&lt;/h2>
+&lt;ul>
+&lt;li>VSCode: all config is auto-synced using GitHub.&lt;/li>
+&lt;li>vim: I just use Tim Pope&amp;rsquo;s sensible now as I don&amp;rsquo;t spend as much time on vim anymore&lt;/li>
+&lt;/ul>
+&lt;h2 id="fonts">Fonts&lt;/h2>
+&lt;ul>
+&lt;li>mononoki for Agda&lt;/li>
+&lt;li>FiraCode-Retina for everything else&lt;/li>
+&lt;/ul>
+&lt;h2 id="packages">Packages&lt;/h2>
+&lt;p>See &lt;a href="https://github.com/k4rtik/shallow-backup/tree/master/packages" target="_blank" rel="noopener">https://github.com/k4rtik/shallow-backup/tree/master/packages&lt;/a> for complete list. Here are some essentials:&lt;/p>
+&lt;ul>
+&lt;li>brave-browser&lt;/li>
+&lt;li>du-dust&lt;/li>
+&lt;li>gh&lt;/li>
+&lt;li>git&lt;/li>
+&lt;li>hiddenbar&lt;/li>
+&lt;li>hugo&lt;/li>
+&lt;li>iterm2&lt;/li>
+&lt;li>mailtrackerblocker&lt;/li>
+&lt;li>opam&lt;/li>
+&lt;li>PopClip&lt;/li>
+&lt;li>rectangle&lt;/li>
+&lt;li>rescuetime&lt;/li>
+&lt;li>ripgrep&lt;/li>
+&lt;li>tealdeer&lt;/li>
+&lt;li>ticktick&lt;/li>
+&lt;li>tree&lt;/li>
+&lt;li>visual-studio-code&lt;/li>
+&lt;li>yt-dl&lt;/li>
+&lt;li>zoom&lt;/li>
+&lt;/ul>
+&lt;h2 id="languages">Languages&lt;/h2>
+&lt;ul>
+&lt;li>Agda&lt;/li>
+&lt;li>Go&lt;/li>
+&lt;li>Haskell&lt;/li>
+&lt;li>LaTeX&lt;/li>
+&lt;li>OCaml and Coq&lt;/li>
+&lt;li>Python3&lt;/li>
+&lt;li>Rust&lt;/li>
+&lt;/ul></description></item><item><title>How to write parsers fast</title><link>https://k4rtik.github.io/q/post/parsers/</link><pubDate>Wed, 15 Sep 2021 18:01:03 -0500</pubDate><guid>https://k4rtik.github.io/q/post/parsers/</guid><description>&lt;p>I had a fun time writing the openQASM parser over two years ago during my two week visit at UMD College Park. Since then, I have been quite fascinated with parsers. Today, I was trying to write a parser for Lambda Q#, but I wanted to figure out if I could reduce the work I need to do and avoid boilerplate.&lt;/p>
 &lt;p>I found a few projects that seem helpful:&lt;/p>
 &lt;ul>
 &lt;li>Steffen Smolka&amp;rsquo;s &lt;a href="https://github.com/smolkaj/nice-parser" target="_blank" rel="noopener">Nice Parser&lt;/a> that is meant exactly for this need.&lt;/li>

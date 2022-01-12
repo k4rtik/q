@@ -19,7 +19,7 @@ I have recently moved between a few macOS machines and have had to repeat some c
 ## Editors
 - `emacs`: `brew tap "d12frosted/emacs-plus" && brew install emacs-plus`
 - `visual-studio-code`: all config is auto-synced using GitHub.
-- `vim`: I just use [Tim Pope's sensible](https://github.com/tpope/vim-sensible) now as I don't spend as much time on vim anymore
+- `vim`: I just use [Tim Pope's sensible](https://github.com/tpope/vim-sensible) as I don't spend as much time on vim anymore
 
 ## Fonts
 After `brew tap "homebrew/cask-fonts"`

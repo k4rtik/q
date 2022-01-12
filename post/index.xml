@@ -3,7 +3,7 @@
 &lt;ul>
 &lt;li>&lt;code>emacs&lt;/code>: &lt;code>brew tap &amp;quot;d12frosted/emacs-plus&amp;quot; &amp;amp;&amp;amp; brew install emacs-plus&lt;/code>&lt;/li>
 &lt;li>&lt;code>visual-studio-code&lt;/code>: all config is auto-synced using GitHub.&lt;/li>
-&lt;li>&lt;code>vim&lt;/code>: I just use &lt;a href="https://github.com/tpope/vim-sensible" target="_blank" rel="noopener">Tim Pope&amp;rsquo;s sensible&lt;/a> now as I don&amp;rsquo;t spend as much time on vim anymore&lt;/li>
+&lt;li>&lt;code>vim&lt;/code>: I just use &lt;a href="https://github.com/tpope/vim-sensible" target="_blank" rel="noopener">Tim Pope&amp;rsquo;s sensible&lt;/a> as I don&amp;rsquo;t spend as much time on vim anymore&lt;/li>
 &lt;/ul>
 &lt;h2 id="fonts">Fonts&lt;/h2>
 &lt;p>After &lt;code>brew tap &amp;quot;homebrew/cask-fonts&amp;quot;&lt;/code>&lt;/p>

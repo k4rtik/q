@@ -1,47 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Research Notes</title><link>https://k4rtik.github.io/q/post/</link><atom:link href="https://k4rtik.github.io/q/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_512x512_fill_lanczos_center_3.png</url><title>Posts</title><link>https://k4rtik.github.io/q/post/</link></image><item><title>MacOS Setup</title><link>https://k4rtik.github.io/q/post/macos-setup/</link><pubDate>Tue, 11 Jan 2022 16:08:01 -0600</pubDate><guid>https://k4rtik.github.io/q/post/macos-setup/</guid><description>&lt;p>I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it&amp;rsquo;s best to document it here for both my future self and for others.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Research Notes</title><link>https://k4rtik.github.io/q/post/</link><atom:link href="https://k4rtik.github.io/q/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_512x512_fill_lanczos_center_3.png</url><title>Posts</title><link>https://k4rtik.github.io/q/post/</link></image><item><title>MacOS Setup</title><link>https://k4rtik.github.io/q/post/macos-setup/</link><pubDate>Tue, 11 Jan 2022 16:08:01 -0600</pubDate><guid>https://k4rtik.github.io/q/post/macos-setup/</guid><description>&lt;p>I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it&amp;rsquo;s best to document it here for both my future self and for others. Most of these are easy to install using &lt;a href="https://brew.sh/" target="_blank" rel="noopener">brew&lt;/a>.&lt;/p>
 &lt;h2 id="editors">Editors&lt;/h2>
 &lt;ul>
-&lt;li>VSCode: all config is auto-synced using GitHub.&lt;/li>
-&lt;li>vim: I just use Tim Pope&amp;rsquo;s sensible now as I don&amp;rsquo;t spend as much time on vim anymore&lt;/li>
+&lt;li>&lt;code>emacs&lt;/code>: &lt;code>brew tap &amp;quot;d12frosted/emacs-plus&amp;quot; &amp;amp;&amp;amp; brew install emacs-plus&lt;/code>&lt;/li>
+&lt;li>&lt;code>visual-studio-code&lt;/code>: all config is auto-synced using GitHub.&lt;/li>
+&lt;li>&lt;code>vim&lt;/code>: I just use &lt;a href="https://github.com/tpope/vim-sensible" target="_blank" rel="noopener">Tim Pope&amp;rsquo;s sensible&lt;/a> now as I don&amp;rsquo;t spend as much time on vim anymore&lt;/li>
 &lt;/ul>
 &lt;h2 id="fonts">Fonts&lt;/h2>
+&lt;p>After &lt;code>brew tap &amp;quot;homebrew/cask-fonts&amp;quot;&lt;/code>&lt;/p>
 &lt;ul>
-&lt;li>mononoki for Agda&lt;/li>
-&lt;li>FiraCode-Retina for everything else&lt;/li>
+&lt;li>&lt;code>font-mononoki&lt;/code> for Agda&lt;/li>
+&lt;li>&lt;code>font-fira-code&lt;/code> for everything else&lt;/li>
 &lt;/ul>
 &lt;h2 id="packages">Packages&lt;/h2>
-&lt;p>See &lt;a href="https://github.com/k4rtik/shallow-backup/tree/master/packages" target="_blank" rel="noopener">https://github.com/k4rtik/shallow-backup/tree/master/packages&lt;/a> for complete list. Here are some essentials:&lt;/p>
+&lt;p>See &lt;a href="https://github.com/k4rtik/shallow-backup/tree/master/packages" target="_blank" rel="noopener">https://github.com/k4rtik/shallow-backup/tree/master/packages&lt;/a> (private link) for complete list. Here are some essentials:&lt;/p>
 &lt;ul>
-&lt;li>brave-browser&lt;/li>
-&lt;li>du-dust&lt;/li>
-&lt;li>gh&lt;/li>
-&lt;li>git&lt;/li>
-&lt;li>hiddenbar&lt;/li>
-&lt;li>hugo&lt;/li>
-&lt;li>iterm2&lt;/li>
-&lt;li>mailtrackerblocker&lt;/li>
-&lt;li>opam&lt;/li>
-&lt;li>PopClip&lt;/li>
-&lt;li>rectangle&lt;/li>
-&lt;li>rescuetime&lt;/li>
-&lt;li>ripgrep&lt;/li>
-&lt;li>tealdeer&lt;/li>
-&lt;li>ticktick&lt;/li>
-&lt;li>tree&lt;/li>
-&lt;li>visual-studio-code&lt;/li>
-&lt;li>yt-dl&lt;/li>
-&lt;li>zoom&lt;/li>
+&lt;li>&lt;code>brave-browser&lt;/code>&lt;/li>
+&lt;li>&lt;a href="https://github.com/buo/homebrew-cask-upgrade" target="_blank" rel="noopener">&lt;code>brew cu&lt;/code>&lt;/a>: &lt;code>brew tap buo/cask-upgrade &amp;amp;&amp;amp; brew cu pin brave-browser&lt;/code>&lt;/li>
+&lt;li>&lt;code>gh&lt;/code>&lt;/li>
+&lt;li>&lt;code>git&lt;/code>&lt;/li>
+&lt;li>&lt;code>hiddenbar&lt;/code>&lt;/li>
+&lt;li>&lt;code>htop&lt;/code>&lt;/li>
+&lt;li>&lt;code>hugo&lt;/code>&lt;/li>
+&lt;li>&lt;code>iterm2&lt;/code>&lt;/li>
+&lt;li>&lt;code>mailtrackerblocker&lt;/code>&lt;/li>
+&lt;li>&lt;code>rectangle&lt;/code>&lt;/li>
+&lt;li>&lt;code>rescuetime&lt;/code>&lt;/li>
+&lt;li>&lt;code>ticktick&lt;/code>&lt;/li>
+&lt;li>&lt;code>tree&lt;/code>&lt;/li>
+&lt;li>&lt;a href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener">yt-dlp&lt;/a>: &lt;code>brew install yt-dlp/taps/yt-dlp&lt;/code>&lt;/li>
+&lt;li>&lt;code>zoom&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="languages">Languages&lt;/h2>
 &lt;ul>
-&lt;li>Agda&lt;/li>
-&lt;li>Go&lt;/li>
-&lt;li>Haskell&lt;/li>
-&lt;li>LaTeX&lt;/li>
-&lt;li>OCaml and Coq&lt;/li>
-&lt;li>Python3&lt;/li>
-&lt;li>Rust&lt;/li>
-&lt;/ul></description></item><item><title>How to write parsers fast</title><link>https://k4rtik.github.io/q/post/parsers/</link><pubDate>Wed, 15 Sep 2021 18:01:03 -0500</pubDate><guid>https://k4rtik.github.io/q/post/parsers/</guid><description>&lt;p>I had a fun time writing the openQASM parser over two years ago during my two week visit at UMD College Park. Since then, I have been quite fascinated with parsers. Today, I was trying to write a parser for Lambda Q#, but I wanted to figure out if I could reduce the work I need to do and avoid boilerplate.&lt;/p>
+&lt;li>&lt;a href="https://www.haskell.org/ghcup/" target="_blank" rel="noopener">Haskell&lt;/a>&lt;/li>
+&lt;li>Agda (&lt;code>brew install llvm@12&lt;/code>, add it to the PATH, and then &lt;code>cabal install Agda&lt;/code>)&lt;/li>
+&lt;li>&lt;a href="https://tug.org/texlive/acquire-netinstall.html" target="_blank" rel="noopener">LaTeX&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://opam.ocaml.org/doc/Install.html" target="_blank" rel="noopener">OCaml&lt;/a> and Coq (&lt;code>opam install coq&lt;/code>)&lt;/li>
+&lt;li>Python3: &lt;code>brew install python&lt;/code>&lt;/li>
+&lt;li>&lt;a href="https://rustup.rs/" target="_blank" rel="noopener">Rust&lt;/a>
+&lt;ul>
+&lt;li>&lt;code>tealdeer&lt;/code>&lt;/li>
+&lt;li>&lt;code>cargo-update&lt;/code>&lt;/li>
+&lt;li>&lt;code>du-dust&lt;/code>&lt;/li>
+&lt;li>&lt;code>ripgrep&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="maintenance">Maintenance&lt;/h1>
+&lt;p>I often issue the following command to keep most of the packages updated:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">brewup &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> rustup update &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> cargo install-update -a &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> brew cu -a -y &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> tlmgr update --self --all &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> ghcup list -c available
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>where &lt;code>brewup&lt;/code> is aliased to &lt;code>brew update; brew upgrade; brew cleanup; brew doctor&lt;/code>&lt;/p>
+&lt;p>I tend to not auto-update opam packages as they can often break projects but I do maintain a &lt;code>default&lt;/code> switch with the latest OCaml version and several &lt;a href="https://github.com/coq/platform/" target="_blank" rel="noopener">coq-platform&lt;/a> releases, e.g.:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">❯ opam switch
+&lt;span style="color:#75715e"># switch compiler description&lt;/span>
+→ __coq-platform.2021.11.0~8.14~2021.11 ocaml-base-compiler.4.10.2 __coq-platform.2021.11.0~8.14~2021.11
+default ocaml.4.12.1 default
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>How to write parsers fast</title><link>https://k4rtik.github.io/q/post/parsers/</link><pubDate>Wed, 15 Sep 2021 18:01:03 -0500</pubDate><guid>https://k4rtik.github.io/q/post/parsers/</guid><description>&lt;p>I had a fun time writing the openQASM parser over two years ago during my two week visit at UMD College Park. Since then, I have been quite fascinated with parsers. Today, I was trying to write a parser for Lambda Q#, but I wanted to figure out if I could reduce the work I need to do and avoid boilerplate.&lt;/p>
 &lt;p>I found a few projects that seem helpful:&lt;/p>
 &lt;ul>
 &lt;li>Steffen Smolka&amp;rsquo;s &lt;a href="https://github.com/smolkaj/nice-parser" target="_blank" rel="noopener">Nice Parser&lt;/a> that is meant exactly for this need.&lt;/li>

@@ -28,8 +28,8 @@
 <meta property="og:description" content="I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it&rsquo;s best to document it here for both my future self and for others."><meta property="og:image" content="https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_512x512_fill_lanczos_center_3.png">
 <meta property="twitter:image" content="https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2022-01-11T16:08:01-06:00">
-<meta property="article:modified_time" content="2022-01-11T16:24:53-06:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://k4rtik.github.io/q/post/macos-setup/"},"headline":"MacOS Setup","datePublished":"2022-01-11T16:08:01-06:00","dateModified":"2022-01-11T16:24:53-06:00","author":{"@type":"Person","name":"Kartik"},"publisher":{"@type":"Organization","name":"Research Notes","logo":{"@type":"ImageObject","url":"https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_192x192_fill_lanczos_center_3.png"}},"description":"I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it\u0026rsquo;s best to document it here for both my future self and for others."}</script>
+<meta property="article:modified_time" content="2022-01-12T17:21:33-06:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://k4rtik.github.io/q/post/macos-setup/"},"headline":"MacOS Setup","datePublished":"2022-01-11T16:08:01-06:00","dateModified":"2022-01-12T17:21:33-06:00","author":{"@type":"Person","name":"Kartik"},"publisher":{"@type":"Organization","name":"Research Notes","logo":{"@type":"ImageObject","url":"https://k4rtik.github.io/q/media/icon_hu95bcf4001b8c3a9b9433f24a55ec28ef_13239_192x192_fill_lanczos_center_3.png"}},"description":"I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it\u0026rsquo;s best to document it here for both my future self and for others."}</script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js integrity="sha256-5VhCqFam2Cn+yjw61zbBNrbHVJ6SRydPeKopYlngbiQ=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css integrity="sha256-zQ0LblD/Af8vOppw18+2anxsuaz3pWYyVWi+bTvTH8Q=" crossorigin=anonymous>
 <script>window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#2962ff",text:"rgb(255, 255, 255)"},button:{background:"rgb(255, 255, 255)",text:"#2962ff"}},theme:"classic",content:{message:"This website uses cookies to ensure you get the best experience on our website.",dismiss:"Got it!",link:"Learn more",href:"https://www.cookiesandyou.com"}})})</script>
@@ -89,56 +89,70 @@
 <div class=article-metadata>
 <span class=article-date>
 Last updated on
-Jan 11, 2022
+Jan 12, 2022
 </span>
 </div>
 </div>
 <div class=article-container>
 <div class=article-style>
-<p>I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it&rsquo;s best to document it here for both my future self and for others.</p>
+<p>I have recently moved between a few macOS machines and have had to repeat some common development configuration. I think it&rsquo;s best to document it here for both my future self and for others. Most of these are easy to install using <a href=https://brew.sh/ target=_blank rel=noopener>brew</a>.</p>
 <h2 id=editors>Editors</h2>
 <ul>
-<li>VSCode: all config is auto-synced using GitHub.</li>
-<li>vim: I just use Tim Pope&rsquo;s sensible now as I don&rsquo;t spend as much time on vim anymore</li>
+<li><code>emacs</code>: <code>brew tap "d12frosted/emacs-plus" && brew install emacs-plus</code></li>
+<li><code>visual-studio-code</code>: all config is auto-synced using GitHub.</li>
+<li><code>vim</code>: I just use <a href=https://github.com/tpope/vim-sensible target=_blank rel=noopener>Tim Pope&rsquo;s sensible</a> now as I don&rsquo;t spend as much time on vim anymore</li>
 </ul>
 <h2 id=fonts>Fonts</h2>
+<p>After <code>brew tap "homebrew/cask-fonts"</code></p>
 <ul>
-<li>mononoki for Agda</li>
-<li>FiraCode-Retina for everything else</li>
+<li><code>font-mononoki</code> for Agda</li>
+<li><code>font-fira-code</code> for everything else</li>
 </ul>
 <h2 id=packages>Packages</h2>
-<p>See <a href=https://github.com/k4rtik/shallow-backup/tree/master/packages target=_blank rel=noopener>https://github.com/k4rtik/shallow-backup/tree/master/packages</a> for complete list. Here are some essentials:</p>
+<p>See <a href=https://github.com/k4rtik/shallow-backup/tree/master/packages target=_blank rel=noopener>https://github.com/k4rtik/shallow-backup/tree/master/packages</a> (private link) for complete list. Here are some essentials:</p>
 <ul>
-<li>brave-browser</li>
-<li>du-dust</li>
-<li>gh</li>
-<li>git</li>
-<li>hiddenbar</li>
-<li>hugo</li>
-<li>iterm2</li>
-<li>mailtrackerblocker</li>
-<li>opam</li>
-<li>PopClip</li>
-<li>rectangle</li>
-<li>rescuetime</li>
-<li>ripgrep</li>
-<li>tealdeer</li>
-<li>ticktick</li>
-<li>tree</li>
-<li>visual-studio-code</li>
-<li>yt-dl</li>
-<li>zoom</li>
+<li><code>brave-browser</code></li>
+<li><a href=https://github.com/buo/homebrew-cask-upgrade target=_blank rel=noopener><code>brew cu</code></a>: <code>brew tap buo/cask-upgrade && brew cu pin brave-browser</code></li>
+<li><code>gh</code></li>
+<li><code>git</code></li>
+<li><code>hiddenbar</code></li>
+<li><code>htop</code></li>
+<li><code>hugo</code></li>
+<li><code>iterm2</code></li>
+<li><code>mailtrackerblocker</code></li>
+<li><code>rectangle</code></li>
+<li><code>rescuetime</code></li>
+<li><code>ticktick</code></li>
+<li><code>tree</code></li>
+<li><a href=https://github.com/yt-dlp/yt-dlp target=_blank rel=noopener>yt-dlp</a>: <code>brew install yt-dlp/taps/yt-dlp</code></li>
+<li><code>zoom</code></li>
 </ul>
 <h2 id=languages>Languages</h2>
 <ul>
-<li>Agda</li>
-<li>Go</li>
-<li>Haskell</li>
-<li>LaTeX</li>
-<li>OCaml and Coq</li>
-<li>Python3</li>
-<li>Rust</li>
+<li><a href=https://www.haskell.org/ghcup/ target=_blank rel=noopener>Haskell</a></li>
+<li>Agda (<code>brew install llvm@12</code>, add it to the PATH, and then <code>cabal install Agda</code>)</li>
+<li><a href=https://tug.org/texlive/acquire-netinstall.html target=_blank rel=noopener>LaTeX</a></li>
+<li><a href=https://opam.ocaml.org/doc/Install.html target=_blank rel=noopener>OCaml</a> and Coq (<code>opam install coq</code>)</li>
+<li>Python3: <code>brew install python</code></li>
+<li><a href=https://rustup.rs/ target=_blank rel=noopener>Rust</a>
+<ul>
+<li><code>tealdeer</code></li>
+<li><code>cargo-update</code></li>
+<li><code>du-dust</code></li>
+<li><code>ripgrep</code></li>
 </ul>
+</li>
+</ul>
+<h1 id=maintenance>Maintenance</h1>
+<p>I often issue the following command to keep most of the packages updated:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>brewup <span style=color:#f92672>&amp;&amp;</span> rustup update <span style=color:#f92672>&amp;&amp;</span> cargo install-update -a <span style=color:#f92672>&amp;&amp;</span> brew cu -a -y <span style=color:#f92672>&amp;&amp;</span> tlmgr update --self --all <span style=color:#f92672>&amp;&amp;</span> ghcup list -c available
+</code></pre></div><p>where <code>brewup</code> is aliased to <code>brew update; brew upgrade; brew cleanup; brew doctor</code></p>
+<p>I tend to not auto-update opam packages as they can often break projects but I do maintain a <code>default</code> switch with the latest OCaml version and several <a href=https://github.com/coq/platform/ target=_blank rel=noopener>coq-platform</a> releases, e.g.:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>❯ opam switch
+<span style=color:#75715e>#  switch                                 compiler                    description</span>
+→  __coq-platform.2021.11.0~8.14~2021.11  ocaml-base-compiler.4.10.2  __coq-platform.2021.11.0~8.14~2021.11
+   default                                ocaml.4.12.1                default
+</code></pre></div>
 </div>
 <p class=edit-page>
 <a href=https://github.com/k4rtik/q/edit/main/content/post/macos-setup.md>

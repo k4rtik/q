@@ -46,7 +46,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h1 id="maintenance">Maintenance&lt;/h1>
+&lt;h2 id="maintenance">Maintenance&lt;/h2>
 &lt;p>I often issue the following command to keep most of the packages updated:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">brewup &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> rustup update &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> cargo install-update -a &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> brew cu -a -y &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> tlmgr update --self --all &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> ghcup list -c available
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>where &lt;code>brewup&lt;/code> is aliased to &lt;code>brew update; brew upgrade; brew cleanup; brew doctor&lt;/code>&lt;/p>

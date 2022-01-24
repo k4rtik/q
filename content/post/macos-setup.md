@@ -56,7 +56,7 @@ See https://github.com/k4rtik/shallow-backup/tree/master/packages (private link)
   - `du-dust`
   - `ripgrep`
 
-# Maintenance
+## Maintenance
 I often issue the following command to keep most of the packages updated:
 ```shell
 brewup && rustup update && cargo install-update -a && brew cu -a -y && tlmgr update --self --all && ghcup list -c available
